@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import AuthService from '../services/authService';
 
 export default function Login() {
   const [userData, setUserData] = useState({
@@ -12,7 +13,7 @@ export default function Login() {
 
   const handleSubmit = () =>{
     //Submit the data
-    
+    AuthService.login(userData)
   }
 
 
